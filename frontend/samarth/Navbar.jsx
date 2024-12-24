@@ -39,10 +39,16 @@ export default function Navbar() {
 
   return (
     <div className={`w-screen pr-8 pl-8 pb-8 ${roboto.className}`}>
-      <div className="mt-4 mb-3 text-2xl items-center justify-center md:justify-between  flex font-roboto">
-        <div className="logo inline font-bold text-[#26303f] text-xl   md:text-3xl">
+      <div className="mt-4 mb-3 text-2xl items-center  md:justify-between  flex font-roboto">
+        <div className="logo">
+          <img src="/logo.png" alt="" className="md:w-28 w-12 mr-5  " />
+        </div>
+        <div className="logo inline font-bold text-[#26303f] text-[1.18rem]     md:text-3xl">
           <Link href={"/"}>
-            <img src="/dr symbol.png" className="h-9 inline-block " />
+            <img
+              src="/dr symbol.png"
+              className="h-9  md:inline-block hidden "
+            />
             Dr. Mohammad <span className="text-[#0056b3]">S</span>hahrukh
           </Link>
         </div>

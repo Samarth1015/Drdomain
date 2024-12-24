@@ -10,7 +10,6 @@ const roboto = Roboto({
 
 export default function Body() {
   useEffect(() => {
-    // GSAP Animations
     gsap.from(".heading", {
       y: -50,
       opacity: 0,
@@ -51,13 +50,13 @@ export default function Body() {
           regression, and correlation analyses such as Spearman's Rho and
           Pearson Correlation Coefficient.
         </div>
-        <div className=" flex justify-center md:justify-start md:ml-1">
-          <button className="bg-[#ee8244] hover:bg-[#d96e3b] rounded-md  mt-5 w-60 px-4 py-2 text-white text-lg font-medium transition-all duration-300 ">
+        <div className=" flex justify-center md:justify-start md:ml-1 description">
+          <button className="bg-[#ee8244]  hover:bg-[#d96e3b] rounded-md   mt-5  md:w-60 px-4 py-2 w-48 text-white text-lg font-medium transition-all duration-300 ">
             View More
           </button>
         </div>
       </div>
-      <div className="ml-72 size-96 md:block hidden">
+      <div className="ml-72  size-96 md:block hidden">
         <img src="/dr.png" alt="" className="image" />
       </div>
     </div>
