@@ -37,11 +37,11 @@ export default function Body() {
 
   return (
     <div className={`pr-8 pl-8 pb-8 ${roboto.className} flex`}>
-      <div className="w-1/2">
-        <div className="text-4xl font-bold text-center text-[#26303f] mt-20 heading">
+      <div className="md:w-1/2 w-screen">
+        <div className="md:text-4xl text-2xl font-extrabold text-center text-[#26303f] mt-4 md:mt-20 heading">
           Expert Solutions for Research, Thesis, and Statistical Analysis.
         </div>
-        <div className="text-[#596c89] text-center mt-8 description">
+        <div className="text-[#596c89] text-sm md:text-lg text-center  mt-8 description">
           We offer all types of statistical analysis services, including sample
           size calculation, Chi-square test, p-value (from z-test and Chi-square
           test), r value, t-test, and F ratio. Additionally, we provide one-way
@@ -51,8 +51,13 @@ export default function Body() {
           regression, and correlation analyses such as Spearman's Rho and
           Pearson Correlation Coefficient.
         </div>
+        <div className=" flex justify-center md:justify-start md:ml-1">
+          <button className="bg-[#ee8244] hover:bg-[#d96e3b] rounded-md  mt-5 w-60 px-4 py-2 text-white text-lg font-medium transition-all duration-300 ">
+            View More
+          </button>
+        </div>
       </div>
-      <div className="ml-72 size-96">
+      <div className="ml-72 size-96 md:block hidden">
         <img src="/dr.png" alt="" className="image" />
       </div>
     </div>
