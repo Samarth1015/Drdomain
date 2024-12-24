@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { Roboto } from "next/font/google";
+import Card from "../card";
 
 const roboto = Roboto({
   subsets: ["latin"],
