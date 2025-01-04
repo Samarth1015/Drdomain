@@ -36,8 +36,8 @@ export default function Body() {
   }, []);
 
   return (
-    <div className={`pr-8 pl-8 pb-8 ${roboto.className} flex`}>
-      <div className="md:w-1/2 w-screen">
+    <div className={`pr-8 pl-8   mt-8 ${roboto.className} flex`}>
+      <div className="md:w-1/2 w-screen ">
         <div className="md:text-4xl text-2xl font-extrabold text-center text-[#26303f] mt-4 md:mt-20 heading">
           Expert Solutions for Research, Thesis, and Statistical Analysis.
         </div>
@@ -52,7 +52,7 @@ export default function Body() {
           Pearson Correlation Coefficient.
         </div>
         <div className=" flex justify-center md:justify-start md:ml-1 description">
-          <button className="bg-[#ee8244]  hover:bg-[#d96e3b] rounded-md   mt-5  md:w-60 px-4 py-2 w-48 text-white text-lg font-medium transition-all duration-300 ">
+          <button className="bg-[#ee8244]  hover:bg-[#d96e3b] rounded-md   mt-6  md:w-60 px-4 py-2 w-48 text-white text-lg font-medium transition-all duration-300 ">
             View More
           </button>
         </div>

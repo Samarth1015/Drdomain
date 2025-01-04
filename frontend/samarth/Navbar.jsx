@@ -37,26 +37,34 @@ export default function Navbar() {
     });
   }, []);
 
+  const handleNavigation = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className={`w-screen pr-8 pl-8 pb-8 ${roboto.className}`}>
-      <div className="mt-4 mb-3 text-2xl items-center  md:justify-between  flex font-roboto">
+    <div className={`pr-8 pl-8 pb-8 ${roboto.className}`}>
+      <div className="mt-4 mb-3 text-2xl items-center md:justify-between flex font-roboto">
         <div className="logo">
-          <img src="/logo.png" alt="" className="md:w-28 w-12 mr-5  " />
+          <img src="/logo.png" alt="Logo" className="md:w-28 w-12 mr-5" />
         </div>
-        <div className="logo inline font-bold text-[#26303f] text-[1.18rem]     md:text-3xl">
+        <div className="logo inline font-bold text-[#26303f] text-[1.18rem] md:text-3xl">
           <Link href={"/"}>
             <img
               src="/dr symbol.png"
-              className="h-9  md:inline-block hidden "
+              className="h-9 md:inline-block hidden"
+              alt="Dr Symbol"
             />
             Dr. Mohammad <span className="text-[#0056b3]">S</span>hahrukh
           </Link>
         </div>
 
-        <div className="email-icon hidden md:block ">
+        <div className="email-icon hidden md:block">
           <Link
             href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfrKxcgzlbCDlnldzdzVMZkXcmrBLbPVXNwRzKjkgRMXXwZKdwNSvjFksDKrFqvQzLrspL"
-            className="inline-block text-xl hover:text-[#0056b3] hover:scale- hover:text-2xl transition-all duration-300"
+            className="inline-block text-xl hover:text-[#0056b3]  transition-all duration-300"
           >
             <CiMail className="inline-block size-7 text-[#0c9cdf]" />
             mlt07@ucbmsh.org
@@ -65,14 +73,23 @@ export default function Navbar() {
       </div>
 
       <div className="text-xl h-14 bg-[#0c9cdf] text-white rounded-xl flex justify-around items-center font-roboto">
-        <div className="nav-link">
-          <Link href={"/"}>Home</Link>
+        <div
+          className="nav-link cursor-pointer hover:underline"
+          onClick={() => handleNavigation("body")}
+        >
+          Home
         </div>
-        <div className="nav-link">
-          <Link href={"/"}>Services</Link>
+        <div
+          className="nav-link cursor-pointer hover:underline"
+          onClick={() => handleNavigation("services")}
+        >
+          Services
         </div>
-        <div className="nav-link">
-          <Link href={"/"}>Contact</Link>
+        <div
+          className="nav-link cursor-pointer hover:underline"
+          onClick={() => handleNavigation("get-in-touch")}
+        >
+          Contact
         </div>
       </div>
     </div>
