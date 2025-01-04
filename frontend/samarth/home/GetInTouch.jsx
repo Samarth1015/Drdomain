@@ -18,6 +18,18 @@ const showToast = (msg) => {
     icon: "👏",
   });
 };
+const showToasterr = (msg) => {
+  toast.error(msg, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeButton: true,
+    className: "custom-toast",
+    bodyClassName: "custom-toast-body",
+    progressClassName: "custom-toast-progress",
+    icon: "👏",
+  });
+};
 
 const GetInTouch = () => {
   const [formdata, setFormdata] = useState({});
@@ -123,10 +135,10 @@ const GetInTouch = () => {
                   "Thank you for contacting us! We will get back to you soon."
                 );
               } else {
-                showToast("Something went wrong! Please try again later.");
+                showToasterr("Something went wrong! Please try again later.");
               }
             } catch (error) {
-              showToast("Something went wrong! Please try again later.");
+              showToasterr("Something went wrong! Please try again later.");
             }
           }}
           className="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700"
@@ -134,7 +146,7 @@ const GetInTouch = () => {
           Submit
         </button>
       </div>
-      <div className="w-1/2">
+      <div className="md:w-1/2 w-full ">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.7585862712135!2d75.81858391056022!3d22.674831279333105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fc3d74d26abd%3A0xc9f11955fbbd6cda!2sRyan%20International%20School%2C%20CAT%20Road%2C%20Indore%20-%20CBSE!5e1!3m2!1sen!2sin!4v1735989468710!5m2!1sen!2sin"
           loading="lazy"
