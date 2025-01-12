@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { Roboto } from "next/font/google";
 import Card from "../card";
+import Link from "next/link";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -52,9 +53,12 @@ export default function Body() {
           Pearson Correlation Coefficient.
         </div>
         <div className=" flex justify-center md:justify-start md:ml-1 description">
-          <button className="bg-[#ee8244]  hover:bg-[#d96e3b] rounded-md   mt-6  md:w-60 px-4 py-2 w-48 text-white text-lg font-medium transition-all duration-300 ">
+          <Link
+            href="/info"
+            className="bg-[#ee8244]  hover:bg-[#d96e3b] rounded-md text-center    mt-6  md:w-60 px-4 py-2 w-48 text-white text-lg font-medium transition-all duration-300 "
+          >
             View More
-          </button>
+          </Link>
         </div>
       </div>
       <div className="ml-72  size-96 md:block hidden">

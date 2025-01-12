@@ -72,7 +72,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="text-xl h-14 bg-[#0c9cdf] text-white rounded-xl flex justify-around items-center font-roboto">
+      <div
+        className="text-xl W
+     h-14 bg-[#0c9cdf] text-white rounded-xl flex justify-around items-center font-roboto"
+      >
         <div
           className="nav-link cursor-pointer hover:underline"
           onClick={() => handleNavigation("body")}
