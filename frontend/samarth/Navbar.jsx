@@ -51,14 +51,7 @@ export default function Navbar() {
           <img src="/logo.png" alt="Logo" className="md:w-28 w-12 mr-5" />
         </div>
         <div className="logo inline font-bold text-[#26303f] text-[1.18rem] md:text-3xl">
-          <Link href={"/"}>
-            <img
-              src="/dr symbol.png"
-              className="h-9 md:inline-block hidden"
-              alt="Dr Symbol"
-            />
-            Dr. Mohammad <span className="text-[#0056b3]">S</span>hahrukh
-          </Link>
+          <Link href={"/"}>MS Research </Link>
         </div>
 
         <div className="email-icon hidden md:block">
