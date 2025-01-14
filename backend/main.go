@@ -2,17 +2,25 @@ package main
 
 import (
 	"back/routes"
+	"log"
 	"net/http"
-	"github.com/gorilla/handlers"
+	"os"
 
 	
 )
 
 func main() {
-	route:=routes.Route();
-	http.ListenAndServe(":8080", handlers.CORS(
-		handlers.AllowedOrigins([]string{"*"}),
-		handlers.AllowedMethods([]string{"GET","POST","PUT","DELETE","OPTIONS"}),
-		handlers.AllowedHeaders([]string{"Content-Type","Authorization","X-Requested-With"}),
-	)(route));
+	r := routes.Route();
+
+	
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000" 
+	}
+
+	log.Printf("Server starting on port %s...", port)
+	err := http.ListenAndServe("0.0.0.0:"+port, r)
+	if err != nil {
+		log.Fatalf("Error starting server: %v", err)
+	}
 }
