@@ -124,7 +124,7 @@ const GetInTouch = () => {
             console.log(formdata);
             try {
               let res = await axios.post(
-                "http://localhost:8080/api/insert",
+                "http://localhost:8080/api/email",
                 formdata,
                 {
                   headers: { "Content-Type": "application/json" },
