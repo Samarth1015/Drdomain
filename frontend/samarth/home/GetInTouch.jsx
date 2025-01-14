@@ -124,7 +124,7 @@ const GetInTouch = () => {
             console.log(formdata);
             try {
               let res = await axios.post(
-                "http://localhost:8080/api/email",
+                "https://drportback-production.up.railway.app/api/mail",
                 formdata,
                 {
                   headers: { "Content-Type": "application/json" },
@@ -138,6 +138,7 @@ const GetInTouch = () => {
                 showToasterr("Something went wrong! Please try again later.");
               }
             } catch (error) {
+              console.log(error);
               showToasterr("Something went wrong! Please try again later.");
             }
           }}
